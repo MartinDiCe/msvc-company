@@ -13,6 +13,7 @@ import org.springframework.data.relational.core.mapping.Table;
 public class Company extends AuditableEntity{
 
     @Id
+    private String name;
     private String id;
     private String nombreFantasia;
     private TipoCompany tipo;
@@ -21,5 +22,14 @@ public class Company extends AuditableEntity{
     private String razonSocial;
     private String descripcion;
     private String variableLibre;
+
+    public boolean isActive() {
+        boolean active = false;
+        return active;
+    }
+
+    public boolean setActive(boolean active) {
+        return active;
+    }
 
 }
